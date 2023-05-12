@@ -15,5 +15,20 @@ public class Service {
         if(b == 0) throw new IllegalArgumentException();
         return (double)a / b;
     }
+    public double signed(int a, int b, char singe){
+        switch (singe){
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '*':
+                return a * b;
+            case '/':
+                return a / b;
+            default:
+                throw new IllegalArgumentException("Invalid operator: " + singe);
+        }
+
+    }
 
 }
